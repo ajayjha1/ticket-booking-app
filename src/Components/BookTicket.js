@@ -1,7 +1,7 @@
 import React from 'react'
 import data from './data';
 
-function Input() {
+function BookTicket() {
     const [noOfTicket, setNoOfTicket] = React.useState("");
     const [message, setMessage] = React.useState("");
     var seatBooked = [] // An array to store the seat numbers booked for the user
@@ -67,7 +67,6 @@ function Input() {
               if(data[k].booked == false || data[k].booked == null){
               data[k].booked = true;
               allotedSeats++;
-              
               seatBooked.push(k+1);
               }
               if(allotedSeats == parseInt(noOfTicket.target.value)){
@@ -104,7 +103,7 @@ function Input() {
         var arr = [];
         arr[i] = j+1;
         i++;
-        seatBooked.push(j+1)
+        seatBooked.push(j+1) //Seat Numbers will be pushed in this array
       }
     }
     setMessage("Your seats are " + seatBooked)
@@ -118,9 +117,10 @@ function Input() {
       <input type={"number"} onChange={(e) => setNoOfTicket(e)} />
       <button onClick={checkRow}>Submit</button>
       <br />
-      <h4>{message}</h4>
+      <h4>{message}</h4> 
+      {/* Error message or seat number will be displayed by above h4 statement */}
     </div>
   )
 }
 
-export default Input;
+export default BookTicket;

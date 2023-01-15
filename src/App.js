@@ -1,7 +1,7 @@
 import logo from "./logo.svg";
 import "./App.css";
 import React from "react";
-import Input from "./Components/Input";
+import BookTicket from "./Components/BookTicket";
 
 
 function App() {
@@ -9,7 +9,7 @@ function App() {
 
   return (
     <div className="App">
-      <Input/>
+      <BookTicket/>
     </div>
   );
 }
