@@ -35,7 +35,7 @@ function Input() {
             blankSeats++;
           }
           if (blankSeats === parseInt(noOfTicket.target.value)) {
-            bookTicketNearby();
+            bookTicketNearby(); // This function will be called when seats are not available in one row
             bool = true;
             return;
           }
@@ -50,6 +50,7 @@ function Input() {
     }
   };
 
+  // This function will book nearby tickets if all seats cannot be arranged in a single row
   const bookTicketNearby = () => {
     seatBooked = [];
     var bool = false;
@@ -91,6 +92,7 @@ function Input() {
     }
   };
 
+  // This function will book tickets in asingle row
   const bookTicket = (i) => {
     seatBooked = [];
     var k = i * 7;
@@ -110,7 +112,7 @@ function Input() {
   console.log(data);
   
   return (
-    <div style={{ backgroundColor: "lightblue", height:'100%', width: '100%'}} className="App">
+    <div className="App">
       <h2>Ticket booking app</h2>
       <h3>Enter no. of tickets you want to book</h3>
       <input type={"number"} onChange={(e) => setNoOfTicket(e)} />
