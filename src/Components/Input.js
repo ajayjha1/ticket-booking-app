@@ -118,7 +118,7 @@ function Input() {
       <input type={"number"} onChange={(e) => setNoOfTicket(e)} />
       <button onClick={checkRow}>Submit</button>
       <br />
-      <h6>{message}</h6>
+      <h4>{message}</h4>
     </div>
   )
 }
